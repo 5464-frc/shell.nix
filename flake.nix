@@ -18,6 +18,7 @@
       shellHook = ''
       export LC_ALL="en_US.UTF-8"
       export PS1="(nix)::$PS1"
+      . ./pipe
 	      '';
     };
   };
