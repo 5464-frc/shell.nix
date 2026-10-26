@@ -12,10 +12,12 @@
       pkgs = import nixpkgs { inherit system; };
     in pkgs.mkShell {
       packages = with pkgs; [
+        mise
       ];
 
       shellHook = ''
-      echo "hi"
+      export LC_ALL="en_US.UTF-8"
+      export PS1="(nix)::$PS1"
 	      '';
     };
   };
